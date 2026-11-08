@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --fondo-oscuro: #1c2520;
+    --fondo-tarjeta: #27302a;
+    --dorado-claro: #f4d03f;
+    --dorado-medio: #d4ac0d;
+    --dorado-oscuro: #b7950b;
+    --acento-verde: #2e7d52;
+    --whatsapp: #25d366;
+    --texto-claro: #f8f4e9;
+    --texto-suave: #d0c8b8;
+}
+
+body {
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-claro);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--dorado-oscuro), var(--dorado-medio), var(--dorado-claro));
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 0 5px 15px rgba(212, 172, 13, 0.35);
+}
+
+header h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: #222;
+}
+
+header p {
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.bienvenida {
+    padding: 25px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bienvenida h2 {
+    color: var(--dorado-claro);
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.ilustracion img {
+    max-width: 100%;
+    border-radius: 14px;
+    margin-top: 15px;
+    border: 3px solid var(--dorado-medio);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    min-height: 200px;
+    background-color: #2a342e;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+}
+
+.btn-filtro {
+    background-color: var(--fondo-tarjeta);
+    color: var(--dorado-claro);
+    border: 2px solid var(--dorado-medio);
+    padding: 11px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro.activo, .btn-filtro:hover {
+    background-color: var(--dorado-medio);
+    color: #1a1a1a;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.producto {
+    background-color: var(--fondo-tarjeta);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid #3a473f;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    border-color: var(--dorado-claro);
+    box-shadow: 0 8px 20px rgba(244, 208, 63, 0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #2a342e;
+}
+
+.producto h3 {
+    color: var(--dorado-claro);
+    padding: 14px 15px 6px;
+    font-size: 18px;
+}
+
+.descripcion {
+    padding: 0 15px 10px;
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.precio {
+    padding: 4px 15px 12px;
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--dorado-claro);
+}
+
+.btn-compra {
+    width: calc(100% - 30px);
+    margin: 0 15px 20px;
+    background-color: var(--whatsapp);
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-compra:hover {
+    background-color: #1da851;
+    transform: scale(1.03);
+}
+
+.contactos {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.contactos h2 {
+    text-align: center;
+    color: var(--dorado-claro);
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--texto-suave);
+    margin-bottom: 30px;
+}
+
+.contenedor-contactos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-contacto {
+    background-color: var(--fondo-tarjeta);
+    padding: 22px 18px;
+    border-radius: 14px;
+    border: 2px solid #3a473f;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-contacto:hover {
+    border-color: var(--dorado-medio);
+    transform: translateY(-4px);
+}
+
+.icono {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tarjeta-contacto h3 {
+    color: var(--dorado-claro);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.tarjeta-contacto p {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.enlace-contacto {
+    color: var(--whatsapp);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.enlace-contacto:hover {
+    text-decoration: underline;
+}
+
+.redes {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.boton-red {
+    background-color: #3a473f;
+    color: var(--texto-claro);
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.boton-red:hover {
+    background-color: var(--dorado-oscuro);
+    color: #111;
+}
+
+footer {
+    background-color: #141c18;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+    border-top: 2px solid var(--dorado-oscuro);
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.producto.oculto {
+    display: none;
+}
